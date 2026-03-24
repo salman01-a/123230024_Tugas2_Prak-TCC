@@ -1,0 +1,32 @@
+@baseUrl = http://localhost:3000/api
+
+### 1. GET ALL NOTES / Daftar Catatan
+GET {{baseUrl}}/notes
+Accept: application/json
+
+###
+
+### 2. CREATE NOTE
+POST {{baseUrl}}/notes
+Content-Type: application/json
+
+{
+    "judul": "Tugas Praktikum TCC",
+    "isi": "Menyelesaikan laporan tugas 2 dan migrasi database ke Cloud SQL."
+}
+
+###
+
+### 3. UPDATE NOTE
+PUT {{baseUrl}}/notes/5
+Content-Type: application/json
+
+{
+    "judul": "Tugas Praktikum TCC (Update)",
+    "isi": "Laporan sudah selesai, API sudah dites, tinggal push ke GitHub."
+}
+
+###
+
+### 4. DELETE NOTE
+DELETE {{baseUrl}}/notes/5
