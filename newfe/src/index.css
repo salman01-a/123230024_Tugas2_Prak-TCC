@@ -1,0 +1,148 @@
+/* src/index.css */
+
+/* --- GLOBAL STYLES --- */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  margin: 0;
+  padding: 30px 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+/* --- INPUT CARD (FORM) --- */
+.container {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.input-group {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #dcdde1;
+  border-radius: 6px;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: 1rem;
+  transition: border-color 0.2s;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #3498db;
+  box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+button {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #fff;
+  background-color: #2ecc71;
+  font-size: 1rem;
+  transition: background-color 0.2s;
+}
+
+button[type="submit"] {
+  width: 100%;
+  margin-top: 10px;
+  background-color: #27ae60;
+}
+
+button[type="submit"]:hover {
+  background-color: #219150;
+}
+
+/* --- NOTES CARD LIST (GRID) --- */
+.notes-card-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* --- NOTES CARD (ITEM) --- */
+.notes-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  border-top: 5px solid #3498db;
+  transition: transform 0.2s;
+}
+
+.notes-card:hover {
+  transform: translateY(-3px);
+}
+
+.notes-card h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: #2c3e50;
+  font-size: 1.3rem;
+}
+
+.notes-card p {
+  margin-bottom: 10px;
+  flex-grow: 1;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  color: #555;
+}
+
+.note-date {
+  font-size: 0.85em;
+  color: #95a5a6 !important;
+  margin-bottom: 20px !important;
+}
+
+/* Action Buttons inside Card */
+.notes-card button {
+  padding: 8px;
+  font-size: 0.9rem;
+  margin-top: 5px;
+  width: 100%;
+}
+
+.notes-card button:nth-of-type(1) {
+  background-color: #f39c12; /* Warna tombol Edit */
+  margin-bottom: 8px;
+}
+
+.notes-card button:nth-of-type(1):hover {
+  background-color: #d68910;
+}
+
+.notes-card button:nth-of-type(2) {
+  background-color: #e74c3c; /* Warna tombol Hapus */
+}
+
+.notes-card button:nth-of-type(2):hover {
+  background-color: #c0392b;
+}
