@@ -10,10 +10,7 @@ require('./scheme/Notes');
 
 const app = express();
 
-app.use(cors({
-    origin: ['http://localhost', 'http://localhost:5173', 'http://127.0.0.1:5500'],
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
-}));
+app.use(cors());
 
 app.use(express.json());
 
