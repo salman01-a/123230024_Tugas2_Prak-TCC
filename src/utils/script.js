@@ -1,4 +1,4 @@
-var baseUrl = 'https://tugas3-123230024-backend-73763759634.us-central1.run.app';
+var baseUrl = 'https://tugas3-123230024-backend-73763759634.us-central1.run.app/';
 
 async function fetchData() {
     try {
