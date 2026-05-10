@@ -1,0 +1,20 @@
+steps:
+  # Install dependencies
+  - name: 'node:20'
+    entrypoint: 'npm'
+    args: ['install']
+
+  # Build aplikasi React/Vite (Membuat folder dist)
+  - name: 'node:20'
+    entrypoint: 'npm'
+    args: ['run', 'build']
+
+  # Baru kemudian lakukan Deploy
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: 'bash'
+    args:
+      - '-c'
+      - 'gcloud app deploy'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
