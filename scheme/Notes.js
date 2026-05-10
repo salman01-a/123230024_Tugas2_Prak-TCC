@@ -13,7 +13,6 @@ const Notes = sequelize.define("Notes", {
 },{
     timestamps: true, 
     createdAt: 'tanggal_dibuat', 
-    updatedAt: 'tanggal_diubah'
 })
 
 module.exports = Notes;
