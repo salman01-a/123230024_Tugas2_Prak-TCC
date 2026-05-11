@@ -10,7 +10,7 @@ function App() {
   const [isEdit, setIsEdit] = React.useState(false)
   const [id, setId] = React.useState(null)
   const loadNotes = async () => {
-    window.location.reload()
+    // window.location.reload()
     try {
       const data = await fetchData()
       setNotes(data)
@@ -52,18 +52,21 @@ function App() {
     }
   }
 
-  const handleSubmit = (judul, notes) => {
-          console.log("judul:", judul)
-          console.log("notes:", notes)
-          createNote(judul, notes)
-          setNote("")
-          setTitle("")
-          loadNotes()
-        }
+  const handleSubmit = async (judul, notes) => {
+    try {
+        await createNote(judul, notes);
+        setNote("");
+        setTitle("");
+        loadNotes();
+    } catch (error) {
+        console.error("Gagal menyimpan:", error);
+    }
+}
   
   // console.log(notes)
  return <>
   <h1>Aplikasi Catatan</h1>
+  
     <InputCard title = {title} setTitle={setTitle}  note={note} setNote={setNote} handleSubmit={handleSubmit} isEdit={isEdit} UpdateNote={UpdateNote}/>
     <NotesCardList notes = {notes} handleEdit= {handleEdit} />
  </>
