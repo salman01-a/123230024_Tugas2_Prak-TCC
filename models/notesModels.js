@@ -2,7 +2,7 @@ const Notes = require('../scheme/Notes');
 
 const getAllNotes = async () => {
     return await Notes.findAll({
-        attributes: ["id", "judul","isi" , "tanggal_dibuat"],
+        attributes: ["id", "judul","isi" ,"tanggal_dibuat"],
     })
 }
 const create = async (data) => {

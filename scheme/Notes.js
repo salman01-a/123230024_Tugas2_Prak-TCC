@@ -1,7 +1,7 @@
 const { DataTypes } = require("sequelize");
 const sequelize = require("../config/database");
 
-const Notes = sequelize.define("Notes", {
+const Notes = sequelize.define("notes", {
     judul:{
         type: DataTypes.STRING,
         allowNull: false,
@@ -12,7 +12,8 @@ const Notes = sequelize.define("Notes", {
       }, 
 },{
     timestamps: true, 
-    createdAt: 'tanggal_dibuat', 
+    createdAt: 'tanggal_dibuat',
+    updatedAt: false
 })
 
 module.exports = Notes;
